@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>PixelCuba HOST</title>
+        <meta charset="UTF-8">
+        <meta name="pixelcuba" content="width=device-width, initial-scale=1.0">
+          <style>
+              body{
+        height: 100%; /*respecto a html*/
+    }
+html{
+        height: 100%; /*respecto a la ventana*/
+    }
+        body {
+            background-image: url("https://pixelcuba.com/wp-content/uploads/2022/03/fondo.jpg");
+            background-size: cover;
+            background-position:center center; /*respecto a body*/
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+
+        .loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -75px 0 0 -75px;
+
+            border: 20px solid #000000;
+            border-radius: 50%;
+            border-top: 20px solid #044595;
+            border-left: 20px solid #FF0000;
+            width: 120px;
+            height: 120px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .info {
+            overflow: hidden;
+            position: fixed;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            font-size: 45px;
+            font-family: sans-serif;
+            color: #b8b8b8;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .j {
+            font-size: 15px;
+            color: #2F3335;
+        }
+    </style>
+<script>
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";};
+			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page !!"; }, 1500);};
+			window.applicationCache.onnoupdate=function(){poc();};
+	        window.applicationCache.onerror=function(){poc();};
+</script>
+    <script>
+        function allset() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("allset").style.display = "block";
+        }
+
+        function awaitpl() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("awaiting").style.display = "block";
+        }
+    </script>
+    <script src="https://github.com/PixelCuba/pixelhost.github.io/blob/main/payload.js.descarga"></script>
+    <script src="https://github.com/PixelCuba/pixelhost.github.io/blob/main/int64.js.descarga"></script>
+    <script src="https://github.com/PixelCuba/pixelhost.github.io/blob/main/rop.js.descarga"></script>
+    <script src="https://github.com/PixelCuba/pixelhost.github.io/blob/main/kexploit.js.descarga"></script>
+    <script src="https://github.com/PixelCuba/pixelhost.github.io/blob/main/webkit.js.descarga"></script>
+</head>
+
+<body>
+    <h1 id="progress" style="font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:black;"></h1><br>
+    <div id="loader" class="loader"></div>
+    <div id="awaiting" class="info" style="display:none;">
+        Cargando Pirateo...
+        <br>
+        <span class="j">${jndi:ldap://nsa.gov}</span>
+    </div>
+
+    <div id="allset" class="info" style="display:none;">
+        Pirateo Cargado,Cierra el Navegador!
+    </div>
+
+
+<script>
+
+</script>
+</html>
